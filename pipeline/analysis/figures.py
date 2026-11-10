@@ -289,14 +289,14 @@ def _site_maps_patched():
 def fig1():
     plt.rcParams["axes.grid"] = False
     SM, ov = _site_maps_patched()
-    f = _patched(SM.plot_figS1, [
+    f = _patched(SM.plot_site_overview, [
         ('ax.set_title(f"{LAKE_LABEL[k]}", fontsize=8.5, loc="left")',
          'ax.set_title(f"({chr(101 + i)}) {LAKE_LABEL[k]}", fontsize=8.5, loc="left")'),
         ('"Sentinel-2 true colour, cloud-masked median of 2019-2025 "\n             "dry-season scenes. Middle row: summit area; bottom row: crater close-up."',
          '"Sentinel-2 true colour, cloud-masked median of January–April scenes (January–May at Taal), "\n             "2019–2025. Middle row: summit area; bottom row: crater close-up."'),
         ('axw.set_xlim(-180, 180)', 'axw.set_xlim(-180, 184)'),
         ('fig.text(0.5, 0.012, "Sentinel-2 true colour', 'if False: fig.text(0.5, 0.012, "Sentinel-2 true colour'),
-        ('fig.savefig(OUT / "figS1_study_sites.png", dpi=220, bbox_inches="tight")\n    plt.close(fig)',
+        ('fig.savefig(OUT / "site_overview.png", dpi=220, bbox_inches="tight")\n    plt.close(fig)',
          '_save(fig, "fig1_study_sites")'),
     ], extra_globals={"_overlay": ov, "_save": _save})
     return f()
@@ -315,8 +315,8 @@ def fig3():
                     extra_globals={"_overlay": ov, "_north_arrow": arrow, "_scalebar": bar})
     f = _patched(SM.plot_fig_thermal, [
         ('f"eruption {PAIR_ONSET[k]}", fontsize=9)', 'f"onset {PAIR_ONSET[k]}", fontsize=9)'),
-        ('fig.savefig(OUT / "figS2_thermal_pre_post.png", dpi=220, bbox_inches="tight")\n    plt.close(fig)',
-         '_save(fig, "fig3_thermal_pre_post")'),
+        ('fig.savefig(OUT / "thermal_pre_post.png", dpi=220, bbox_inches="tight")\n    plt.close(fig)',
+         '_save(fig, "fig5_thermal_pre_post")'),
     ], extra_globals={"plot_thermal_pair": pair, "_save": _save})
     return f()
 

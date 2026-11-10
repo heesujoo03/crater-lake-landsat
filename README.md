@@ -9,10 +9,9 @@ Code and input data for the article
 
 Archived version: https://doi.org/10.5281/zenodo.24095186
 
-The repository reproduces the tables, figures and numbers of the article and its Supplementary Material
-for Taal Main Crater Lake (Philippines), Santa Ana (Ilamatepec) Crater Lake (El Salvador) and Ruapehu
-Crater Lake (Te Wai ā-moe, New Zealand). It contains only the code that the analysis executes and the
-input files that this code reads.
+The repository contains the code and data used in the article for Taal Main Crater Lake (Philippines),
+Santa Ana (Ilamatepec) Crater Lake (El Salvador) and Ruapehu Crater Lake (Te Wai ā-moe, New Zealand).
+It contains only the code that the analysis executes and the input files that this code reads.
 
 ## Contents
 
@@ -47,10 +46,10 @@ conda activate crater-lake-landsat
 
 Run all commands from the repository root so that `python -m pipeline...` finds the package.
 
-## Reproducing the article
+## Usage
 
-The analysis runs offline in about 30 min on a desktop computer. Run the steps in this order; later
-steps read the outputs of earlier ones.
+Run the steps in this order; later steps read the outputs of earlier ones.
+The analysis runs offline in about 30 min on a desktop computer.
 
 ```bash
 python -m pipeline.s10_post_eruption                        # event windows, contrasts, placebo ranks
@@ -68,33 +67,11 @@ python -m pipeline.analysis.taal_reference_spatial --stage figure
 python -m pipeline.analysis.robustness_table                # sensitivity summary
 python -m pipeline.analysis.diagnostics thermometry         # heating-episode test
 python -m pipeline.analysis.diagnostics diagnostics         # operating diagnostics and alert rates
-python -m pipeline.analysis.figures                         # Figs. 1 and 3–11
-python -m pipeline.analysis.fig2_workflow                   # Fig. 2
+python -m pipeline.analysis.figures                         # article figures
+python -m pipeline.analysis.fig2_workflow                   # workflow figure
 ```
 
-| Article item | Script | Output |
-|---|---|---|
-| Tables 1–2, Supplementary Table S4 | `analysis.water_fraction` | `results/11_analysis/water_fraction/` |
-| Table 3, Fig. 3, Supplementary Table S1 | `s10_post_eruption`, `analysis.validation_energy` | `results/10_post_eruption/`, `results/11_analysis/validation_energy/` |
-| Heating-episode test (Section 4.1), Supplementary Tables S2–S3 | `analysis.diagnostics thermometry` | `results/12_diagnostics/thermometry_*.csv` |
-| Table 4, Fig. 4 | `s10_detectability`, `analysis.variability_timescale` | `results/10_detectability/`, `results/11_analysis/variability_timescale/` |
-| Tables 5–7, Figs. 6–7 and 9–10 | `s10_post_eruption`, `s10_pre_eruption`, `analysis.placebo_design` | `results/10_post_eruption/`, `results/10_pre_eruption/`, `results/11_analysis/placebo_design/` |
-| Table 8, Fig. 8 | `analysis.robustness_table`, `analysis.unmixing_psf`, `analysis.reference_model` | `results/11_analysis/synthesis/`, `…/unmixing_psf/`, `…/reference_model/` |
-| Table 9, Fig. 11 | `s10_magma` | `results/10_magma_geometry/` |
-| Table 10 | `analysis.validation_energy` | `results/11_analysis/validation_energy/` |
-| Supplementary Tables S5–S6 | `analysis.reference_model` | `results/11_analysis/reference_model/` |
-| Supplementary Tables S7–S11 | `analysis.diagnostics diagnostics` | `results/12_diagnostics/` |
-
-Figures are written to `figures/analysis/submission/` as PNG and PDF:
-
-| Figure | File | Figure | File |
-|---|---|---|---|
-| Fig. 1 | `fig1_study_sites` | Fig. 7 | `fig_per_eruption` |
-| Fig. 2 | `fig2_workflow` | Fig. 8 | `figS3_estimator_sensitivity` |
-| Fig. 3 | `fig_ruapehu_validation` | Fig. 9 | `fig9_pre_onset_state` |
-| Fig. 4 | `fig_detectability` | Fig. 10 | `fig_epoch_response` |
-| Fig. 5 | `fig3_thermal_pre_post` | Fig. 11 | `fig_magma_geometry` |
-| Fig. 6 | `fig_timeseries` | | |
+Numerical outputs are written to `results/` and figures to `figures/analysis/submission/`.
 
 ## Data
 
@@ -110,7 +87,7 @@ Figures are written to `figures/analysis/submission/` as PNG and PDF:
 | `data/processed/*_deltaT.csv` | Per-scene mixing-corrected lake temperature, reference temperature and screening flag | Derived |
 | `data/processed/*_met.csv`, `*_dataset.csv` | ERA5-Land predictors at each overpass, and the scene table joined with them | ERA5-Land |
 | `data/processed/*_energy_balance.csv` | Surface energy terms at each overpass | Derived |
-| `data/imagery/` | True-colour and surface-temperature rasters, world relief image (Figs. 1 and 5) | Sentinel-2, Landsat, ETOPO |
+| `data/imagery/` | True-colour and surface-temperature rasters, world relief image used in the maps | Sentinel-2, Landsat, ETOPO |
 | `results/12_diagnostics/samples_buf/` | Per-sample water fraction and surface temperature (pandas pickles) | Landsat |
 
 The satellite and reanalysis inputs were extracted with Google Earth Engine as described in Section 3 of

@@ -6,7 +6,7 @@ them, checks that the re-implementation reproduces the primary series, then runs
   (2) sigma_pair under common lag / same-sensor conditions (+ Santa Ana <1 d)
   (3) sensitivity of sigma_quiet and tau_obs to the short-lag term
   (4) time-block bootstrap of tau_obs (dependence preserving)
-  (5) supplementary structure-function figure
+  (5) structure-function figure
   (6) geometry scaling with each site as the reference
   (7) Taal diagnosis (quiet segments, pairs per bin, SSE profile)
 
@@ -498,11 +498,11 @@ def make_figure(cache):
     h, l = ax[1, 2].get_legend_handles_labels()
     fig.legend(h, l, loc="lower center", ncol=4, fontsize=8, frameon=False, bbox_to_anchor=(0.5, 0.035))
     from pipeline.analysis.figcheck import check
-    iss = check(fig, "figS1_structure_function")
+    iss = check(fig, "structure_function")
     if iss:
-        print("   ! figS1_structure_function:", len(iss), "overlap issue(s)")
-    fig.savefig(OUT / "figS_structure_function.png", dpi=300, bbox_inches="tight")
-    fig.savefig(OUT / "figS_structure_function.pdf", bbox_inches="tight")
+        print("   ! structure_function:", len(iss), "overlap issue(s)")
+    fig.savefig(OUT / "structure_function.png", dpi=300, bbox_inches="tight")
+    fig.savefig(OUT / "structure_function.pdf", bbox_inches="tight")
     plt.close(fig)
 
 

@@ -360,6 +360,6 @@ def fig_sensitivity():
     fig.legend(handles=h, loc="lower center", ncol=4, frameon=False, fontsize=7.5,
                bbox_to_anchor=(0.55, -0.02))
     fig.tight_layout(rect=(0, 0.06, 1, 1))
-    return _save(fig, "figS3_estimator_sensitivity")
+    return _save(fig, "fig8_estimator_sensitivity")
 
 

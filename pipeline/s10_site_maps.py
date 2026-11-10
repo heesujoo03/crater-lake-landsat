@@ -6,7 +6,7 @@ and Landsat surface temperature GeoTIFFs per site, plus a world relief image),
 the lake AOI polygons in S.DATA_DIR / "aoi", and the scene dates and lake medians
 in results/10_site_maps/<site>_thermal_pair.json.
 
-    plot_figS1         location map with summit and crater views
+    plot_site_overview         location map with summit and crater views
     plot_fig_thermal   before/after thermal scenes (one row per site)
     plot_thermal_pair  one before/after pair, used by plot_fig_thermal
 
@@ -307,7 +307,7 @@ def plot_thermal_pair(site_key, axes=None, compact=False):
     return None
 
 
-def plot_figS1():
+def plot_site_overview():
     """Location map with summit and crater views of the study lakes."""
     fig = plt.figure(figsize=(10, 10.5))
     gs = fig.add_gridspec(3, 3, height_ratios=[1.25, 1, 1], hspace=0.30, wspace=0.28)
@@ -368,7 +368,7 @@ def plot_figS1():
     fig.text(0.5, 0.012, "Sentinel-2 true colour, cloud-masked median of 2019-2025 "
              "dry-season scenes. Middle row: summit area; bottom row: crater close-up.",
              ha="center", fontsize=8)
-    fig.savefig(OUT / "figS1_study_sites.png", dpi=220, bbox_inches="tight")
+    fig.savefig(OUT / "site_overview.png", dpi=220, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -380,7 +380,7 @@ def plot_fig_thermal():
         plot_thermal_pair(k, axes=axes[i], compact=True)
         axes[i, 0].set_ylabel(f"({chr(97 + i)}) {LABEL[k].split(' (')[0]}\n"
                               f"eruption {PAIR_ONSET[k]}", fontsize=9)
-    fig.savefig(OUT / "figS2_thermal_pre_post.png", dpi=220, bbox_inches="tight")
+    fig.savefig(OUT / "thermal_pre_post.png", dpi=220, bbox_inches="tight")
     plt.close(fig)
 
 
