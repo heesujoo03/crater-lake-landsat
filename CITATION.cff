@@ -14,6 +14,7 @@ authors:
 license: MIT
 repository-code: "https://github.com/heesujoo03/crater-lake-landsat"
 version: "1.0.0"
+doi: 10.5281/zenodo.24095186
 date-released: "2026-11-09"
 preferred-citation:
   type: article

@@ -1,9 +1,13 @@
 # Detectability of crater lake temperature changes associated with eruptions in multidecadal Landsat records
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24095186.svg)](https://doi.org/10.5281/zenodo.24095186)
+
 Code and input data for the article
 
 > Joo, H.-S., Jung, H.-S. Detectability of crater lake temperature changes associated with eruptions in
 > multidecadal Landsat records. *Submitted.*
+
+Archived version: https://doi.org/10.5281/zenodo.24095186
 
 The repository reproduces the tables, figures and numbers of the article and its Supplementary Material
 for Taal Main Crater Lake (Philippines), Santa Ana (Ilamatepec) Crater Lake (El Salvador) and Ruapehu
