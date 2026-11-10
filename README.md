@@ -116,6 +116,7 @@ the article. Times are UTC and temperatures are in kelvin unless a column name s
 
 * Landsat Collection 2 Level-2 products: courtesy of the U.S. Geological Survey.
 * Sentinel-2 imagery: contains modified Copernicus Sentinel data.
+* Copernicus DEM GLO-30: © DLR e.V. 2010–2014 and © Airbus Defence and Space GmbH 2014–2018, provided under COPERNICUS by the European Union and ESA.
 * ERA5-Land: generated using Copernicus Climate Change Service information (Muñoz Sabater, 2019).
 * Global Surface Water: Pekel et al. (2016), EC JRC/Google.
 * GeoNet: lake temperatures of station RU001 are provided by GeoNet (https://www.geonet.org.nz) under
