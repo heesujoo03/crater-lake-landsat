@@ -90,7 +90,7 @@ Numerical outputs are written to `results/` and figures to `figures/analysis/sub
 | `data/imagery/` | True-colour and surface-temperature rasters, world relief image used in the maps | Sentinel-2, Landsat, ETOPO |
 | `results/12_diagnostics/samples_buf/` | Per-sample water fraction and surface temperature (pandas pickles) | Landsat |
 
-The satellite and reanalysis inputs were extracted with Google Earth Engine as described in Section 3 of
+The satellite and reanalysis inputs were extracted with Google Earth Engine as described in the Methods of
 the article. Times are UTC and temperatures are in kelvin unless a column name says otherwise.
 
 ### Licences and attribution of the source data
