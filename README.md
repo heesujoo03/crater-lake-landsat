@@ -130,4 +130,8 @@ the article.
 
 ## Contact
 
-Hyung-Sup Jung, Department of Geoinformatics, University of Seoul (hsjung@uos.ac.kr).
+Questions about the code and data: Hee-Su Joo (heesujoo03@gmail.com), or open an issue on this
+repository.
+
+Corresponding author of the article: Hyung-Sup Jung, Department of Geoinformatics, University of Seoul
+(hsjung@uos.ac.kr).
