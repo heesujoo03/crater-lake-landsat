@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the article below."
+title: "Code and derived data for: Detectability of crater lake temperature changes associated with eruptions in multidecadal Landsat records"
+type: software
+authors:
+  - family-names: Joo
+    given-names: Hee-Su
+    affiliation: "Department of Geoinformatics, University of Seoul"
+  - family-names: Jung
+    given-names: Hyung-Sup
+    affiliation: "Department of Geoinformatics, University of Seoul"
+    email: hsjung@uos.ac.kr
+license: MIT
+version: "1.0.0"
+date-released: "2026-11-09"
+preferred-citation:
+  type: article
+  title: "Detectability of crater lake temperature changes associated with eruptions in multidecadal Landsat records"
+  authors:
+    - family-names: Joo
+      given-names: Hee-Su
+    - family-names: Jung
+      given-names: Hyung-Sup
+  status: submitted

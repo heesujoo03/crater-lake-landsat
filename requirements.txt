@@ -1,0 +1,9 @@
+# Versions used for the published results (Python 3.10). conda is easier for rasterio/GDAL;
+# see environment.yml.
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.15.3
+matplotlib==3.10.8
+shapely==2.1.2
+pyproj==3.7.1
+rasterio==1.4.4

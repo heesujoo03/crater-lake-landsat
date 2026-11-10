@@ -1,0 +1,15 @@
+# Environment that produced the published results (Python 3.10.19).
+#   conda env create -f environment.yml
+#   conda activate crater-lake-landsat
+name: crater-lake-landsat
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy=1.26.4
+  - pandas=2.3.3
+  - scipy=1.15.3
+  - matplotlib-base=3.10.8
+  - shapely=2.1.2
+  - pyproj=3.7.1
+  - rasterio=1.4.4

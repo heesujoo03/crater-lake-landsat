@@ -1,0 +1,13 @@
+﻿point,lat,lon,r_m,sector,role,dist_from_main_crater_km,bearing_deg,jrc_water_frac_circle,jrc_water_frac_circle_plus_1km,centre_to_shore_m,meets_shore_criterion,dist_to_schematic_dike_axis_km
+N,14.06,120.99,1000,N,open water,5.56,351.0,1.0,1.0,2494.5139807184887,True,5.56
+REF,14.06025,121.0448,1500,NE,current caldera-lake reference (published AOI polygon),7.46,42.0,1.0,1.0,2656.990779058144,True,7.46
+REF_reg,14.045,121.03,1500,NE,registered caldera-lake coordinate (r = 1500 m circle),5.14,42.0,0.9799239654120688,0.92423470773575,882.8363381737297,False,5.14
+E,13.99,121.05,1000,E,open water,6.02,112.0,1.0,1.0,3415.2598729818496,True,6.02
+SE,13.97,121.04,1000,SE,open water,6.34,135.0,1.0,1.0,3394.775397577872,True,6.2
+S,13.945,121.0,1000,S,open water,7.23,179.0,1.0,1.0,3925.87569849072,True,4.05
+S_far,13.915,121.007,750,S,open water (far),10.59,175.0,1.0,1.0,2429.8148077579904,True,6.47
+SW_a,13.948,120.97,750,SW,"open water, over inferred 2020 dike area",7.54,204.0,1.0,1.0,2501.539525971956,True,1.14
+SW_b,13.963,120.966,750,SW,"open water, over inferred 2020 dike area",6.29,214.0,1.0,1.0,2001.2496096189504,True,0.12
+W,14.0,120.96,500,W,narrow W channel (shore criterion relaxed),4.29,255.0,1.0,0.847695915920863,960.0,False,2.87
+NW,14.06,120.975,750,NW,open water,6.04,335.0,1.0,1.0,1994.49241663136,True,6.04
+c01,13.99502,121.01314,1500,SE,"current donor c01 (r = 1500 m, includes island land; water pixels only)",2.34,137.0,0.7611661471649499,0.7801823642302478,0.0,False,2.27
