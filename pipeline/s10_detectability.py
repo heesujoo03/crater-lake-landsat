@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Stage 10d: what change can be detected at each lake, independent of eruptions.
+"""s10_detectability: what change can be detected at each lake, independent of eruptions.
 
 Computes, from lake geometry and observing conditions only:
 
@@ -21,7 +21,7 @@ Computes, from lake geometry and observing conditions only:
 
 Together these imply that the comparison window should be matched to lake depth.
 
-Outputs (Stage 10d records): detectability_by_site, threshold_bridge,
+Outputs (s10_detectability records): detectability_by_site, threshold_bridge,
 pre_eruption_state.
 
     python -m pipeline.s10_detectability

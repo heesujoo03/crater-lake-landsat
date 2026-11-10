@@ -2,7 +2,7 @@
 """Render the final figures, with labels that state the decision rule used
 (maximum-placebo exceedance).
 
-The plotting functions of s10_figures, s10_figures_v3, s10_site_maps and s10_magma
+The plotting functions of s10_figures, s10_fig_detectability, s10_site_maps and s10_magma
 are reused: `_patched` applies exact (old, new) source replacements to labels and
 layout and re-executes the function. Output goes to figures/analysis/ (PNG at
 250 dpi, plus PDF and 600-dpi PNG in figures/analysis/submission/); the figures
@@ -22,7 +22,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 from pipeline import s10_figures as F
-from pipeline import s10_figures_v3 as F3
+from pipeline import s10_fig_detectability as F3
 from pipeline import s10_magma as M
 from pipeline import s10_post_eruption as P
 from pipeline.config import settings as S

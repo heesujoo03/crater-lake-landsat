@@ -7,7 +7,7 @@
     cross-sensor near-coincident pairs, and the Santa Ana single-sensor check.
 
 Pipeline modules and records are not modified. Scenario series are written to a
-scratch "processed" directory and the unchanged Stage 10 code (s10_post_eruption.run_site)
+scratch "processed" directory and the unchanged s10 code (s10_post_eruption.run_site)
 is pointed at it by re-binding settings.PROCESSED_DIR in this process only.
 
 Outputs: results/11_analysis/unmixing_psf/.
@@ -107,7 +107,7 @@ def f_ref_table():
 
 
 def f_timevarying_for(site, fref_by_lake: dict):
-    """Re-run Stage 2b's f assignment with a replaced reference f (per lake)."""
+    """Re-run s2b_water_extent's f assignment with a replaced reference f (per lake)."""
     s = get_site(site)
     w = pd.read_csv(S.INTERIM_DIR / f"{site}_water_extent.csv")
     inv = pd.read_csv(S.INTERIM_DIR / f"{site}_scene_inventory.csv")
@@ -455,7 +455,7 @@ def main():
                                       f_median=round(float(f.median()), 3)))
             print(site, tag, "done")
     t5 = pd.concat(all_t5, ignore_index=True)
-    # check that the baseline scenario reproduces the primary Stage 10 records
+    # check that the baseline scenario reproduces the primary s10 records
     pk = paper.rename(columns={"delta": "paper_delta", "p_placebo_year": "paper_p"})
     chk = t5[t5.scenario == "baseline_repro"].merge(
         pk[["site", "onset", "window_d", "estimator", "paper_delta", "paper_p"]],

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Short-lag variability term, quiet-period variance and the observed timescale tau_obs.
 
-Re-uses the Stage 10d functions (pipeline.s10_detectability) without modifying
+Re-uses the s10_detectability functions (pipeline.s10_detectability) without modifying
 them, checks that the re-implementation reproduces the primary series, then runs:
   (2) sigma_pair under common lag / same-sensor conditions (+ Santa Ana <1 d)
   (3) sensitivity of sigma_quiet and tau_obs to the short-lag term
@@ -30,7 +30,7 @@ OUT = Path("results/11_analysis/variability_timescale")
 OUT.mkdir(parents=True, exist_ok=True)
 NAME = {"taal": "Taal", "santa_ana": "Santa Ana", "ruapehu": "Ruapehu"}
 COLOR = {"taal": "#2a78d6", "ruapehu": "#eb6834", "santa_ana": "#c2415a"}
-GRID = np.geomspace(0.5, 600.0, 4000)          # same grid as Stage 10d
+GRID = np.geomspace(0.5, 600.0, 4000)          # same grid as s10_detectability
 EDGES = np.unique(np.round(np.geomspace(1, D.SF_MAX_LAG_D, 22)).astype(int))
 SENS = {"LANDSAT_5": "L5", "LANDSAT_7": "L7", "LANDSAT_8": "L8", "LANDSAT_9": "L9"}
 
@@ -169,7 +169,7 @@ def fit(tb, s2m, nugget_free=False):
 
 
 def lagbin_boot(tb, s2m, n=300, seed=11):
-    """Lag-bin bootstrap of the Stage 10d scheme (sill fixed)."""
+    """Lag-bin bootstrap of the s10_detectability scheme (sill fixed)."""
     xs, ds, ns = tb.lag_median_d.values, tb.D_K2.values, tb.n_pairs.values
     sill = max(float(np.mean(ds[-3:])) - 2 * s2m, 1e-6)
     rng = np.random.default_rng(seed); out = []

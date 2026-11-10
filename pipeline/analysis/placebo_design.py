@@ -481,7 +481,7 @@ def main():
     pd.DataFrame(pow_rows).to_csv(OUT / "power_injection.csv", index=False)
     pd.DataFrame(fa_rows).to_csv(OUT / "false_alarm_prospective.csv", index=False)
 
-    # check that the re-implementation reproduces the primary Stage 10 records
+    # check that the re-implementation reproduces the primary s10 records
     rp = pd.read_csv(REC_POST); rp = rp[rp.estimator.eq(EST) & rp.window_d.isin(POST_W)]
     rq = pd.read_csv(REC_PRE); rq = rq[rq.estimator.eq(EST) & rq.window_d.isin(PRE_W)
                                       & rq.site.isin(SITES)]

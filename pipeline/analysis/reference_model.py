@@ -566,7 +566,7 @@ def main():
     w_(rows_tr7, "taal_reference_2018_2021_scenes.csv")
     (OUT / "implementation_facts.json").write_text(json.dumps(facts, indent=2, ensure_ascii=False),
                                                    encoding="utf-8")
-    # comparison with the primary Stage 10 records
+    # comparison with the primary s10 records
     pr = pub[pub["estimator"].eq("dT_syn_weather") & pub["window_d"].isin(WINS)]
     rep = pd.DataFrame(rows_c)
     rep = rep[rep["design"].eq("published_repro")]

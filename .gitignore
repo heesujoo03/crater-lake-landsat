@@ -3,7 +3,3 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 Thumbs.db
-# runtime scratch and logs
-work/
-logs/
-models/
